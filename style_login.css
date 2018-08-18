@@ -23,7 +23,6 @@ img{max-width:100%;}
 /*end reset*/
 body {
     background: url('1.jpg') no-repeat 0px 0px;
-    /* background: #cd1f46; */
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
