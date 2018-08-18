@@ -8,8 +8,8 @@
 <style>
 
 .w3-jumbo {
-	text-decoration: underline;
-	}
+  text-decoration: underline;
+  }
 .button {
     background-color: #4CAF50;
     border: none;
@@ -35,8 +35,8 @@
     cursor: pointer;
 }
 .active{
-	color:#fff!important;
-	background-color:#000!important}
+  color:#fff!important;
+  background-color:#000!important}
 
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
@@ -52,16 +52,8 @@ body {font-size:16px;}
     <h1 class="w3-padding-64"><b><u>Response.</u></b></h1>
   </div>
   <div class="w3-bar-block">
-	<a href="tel:108" class="button">Call  Ambulance</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black active"><h4><strong>Emergencies</strong></h4></a> 
-    <a href="#accidents" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Accidents</a> 
-    <a href="#breathing" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Difficulty Breathing</a>
-    <a href="#chestpain" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Chest Pain</a> 
-    <a href="#pregnancy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Pregnancy</a> 
-    <a href="#bleeding" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Uncontrolled Bleeding</a>
-    <a href="#poison" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Poisoning</a> 
-    <a href="#bites" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Animal bites</a> 
-    <a href="#seizures" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Seizures</a>
+  <a href="tel:108" class="button">Call  Ambulance</a>
+    <a href="#e" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black active"><h4><strong>Emergencies</strong></h4></a> 
     <a href="#findstores" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black"><h4><strong>Find Med. Stores</strong></h4></a>
     <a href="#signup" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black"><h4><strong>SignUp</strong></h4></a>
     <a href="#aboutus" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black"><h4><strong>About Us</strong></h4></a>
@@ -80,6 +72,22 @@ body {font-size:16px;}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
+    <!-- Emergencies -->
+  <div class="w3-container" id="e" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Emergencies.</b></h1>
+    <hr style="width:200px;border:3px solid red" class="w3-round">
+    <div class="w3-bar-block">
+      <a href="#accidents" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Accidents</a> 
+      <a href="#bites" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Animal bites</a>
+      <a href="#breathing" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Breathing Difficulty</a>
+      <a href="#chestpain" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Chest Pain</a>             
+      <a href="#poison" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Poisoning</a>
+      <a href="#pregnancy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Pregnancy</a> 
+      <a href="#seizures" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Seizures</a>
+      <a href="#bleeding" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Uncontrolled Bleeding</a> 
+    </div>
+  </div>
+
   <!-- Accidents -->
   <div class="w3-container" style="margin-top:80px" id="accidents">
     <h1 class="w3-jumbo"><b>Response.</b></h1>
@@ -91,64 +99,78 @@ body {font-size:16px;}
     <p>If a person isn't breathing normally after an incident, call an ambulance and start CPR straight away</p>
     <p>To perform CPR : </p>
     <ul>
-	<li>Apply and maintain pressure to the wound with your gloved hand, using a clean pad or dressing if possible; continue to apply pressure until the bleeding stops&nbsp;</li>
-	<li>Use a clean dressing to bandage the wound firmly</li>
-	<li>If&nbsp;bleeding continues through the pad, apply pressure to the wound&nbsp; until the bleeding stops and then apply another pad over the top and bandage it in place; don't remove the original pad or dressing, but continue to check that&nbsp;the bleeding has stopped&nbsp;</li>
-	</ul><br>
-	<p><b>Suggested Medicines : </b>:</p>
-	<ul>
-	  <li>Pain Killers : Aspirin, Naproxen, Ibuprofen</li>
-	  <li>Antiseptics : Betadine</li>
-	</ul><br>
-	<form action="/doctors.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+  <li>Apply and maintain pressure to the wound with your gloved hand, using a clean pad or dressing if possible; continue to apply pressure until the bleeding stops&nbsp;</li>
+  <li>Use a clean dressing to bandage the wound firmly</li>
+  <li>If&nbsp;bleeding continues through the pad, apply pressure to the wound&nbsp; until the bleeding stops and then apply another pad over the top and bandage it in place; don't remove the original pad or dressing, but continue to check that&nbsp;the bleeding has stopped&nbsp;</li>
+  </ul><br>
+  <p><b>Suggested Medicines : </b>:</p>
+  <ul>
+    <li>Pain Killers : Aspirin, Naproxen, Ibuprofen</li>
+    <li>Antiseptics : Betadine</li>
+  </ul><br>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
+  </div>
+
+    <!-- Bites -->
+  <div class="w3-container" id="bites" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Animal Bites.</b></h1>
+    <hr style="width:300px;border:3px solid red" class="w3-round">
+    <p></p>
+    <p></p>
+    <p><b>Still Finding.. To be Uploaded</b>:</p>
+    <br>
+  <form action="hospitals.jsp">          
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
 
   <!-- Breathing Difficulty -->
   <div class="w3-container" id="breathing" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Difficulty Breathing.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Breathing Difficulty.</b></h1>
     <hr style="width:450px;border:3px solid red" class="w3-round">
     <p>Breathing Problems may occurs as a symptom for any of the following : </p>
     <ul>
-	<li>Asthma attack</li>
-	<li>Pressure on Throat or Chest</li>
-	<li>Allergies</li>
-	</ul>
-	<p>Immediate Responses : </p>
+  <li>Asthma attack</li>
+  <li>Pressure on Throat or Chest</li>
+  <li>Allergies</li>
+  </ul>
+  <p>Immediate Responses : </p>
     <ul>
-	<li>Look for any pressure on Chest or Thrroat and remove them as soon as possible.</li>
-	<li>If any known sources of allrgies are found, remove them.</li>
-	<li>If Still the problem persists, It may be a <strong>Asthma attack</strong>.<br>Follow the following Steps : </li>
-		<ul>
-		<li>Sit the person upright comfortably and loosen tight clothing.</li>
-		<li>If the person has asthma medication, such as an inhaler, assist in using it.</li>
-		<li><strong>Do Not</strong> borrow someone else's inhaler.</li>
-		</ul>
-	<li>Symptoms of acute attack include difficulty talking or walking because of shortness of breath or lips or fingernails turning blue. In such case wait for help to arrive.</li>
-	</ul>
+  <li>Look for any pressure on Chest or Thrroat and remove them as soon as possible.</li>
+  <li>If any known sources of allrgies are found, remove them.</li>
+  <li>If Still the problem persists, It may be a <strong>Asthma attack</strong>.<br>Follow the following Steps : </li>
+    <ul>
+    <li>Sit the person upright comfortably and loosen tight clothing.</li>
+    <li>If the person has asthma medication, such as an inhaler, assist in using it.</li>
+    <li><strong>Do Not</strong> borrow someone else's inhaler.</li>
+    </ul>
+  <li>Symptoms of acute attack include difficulty talking or walking because of shortness of breath or lips or fingernails turning blue. In such case wait for help to arrive.</li>
+  </ul>
     <p></p>
     <br>
-	<p><b>Suggested Medicines (Asthma): </b>:</p>
-	<ul>
-	  <li><b>Bronchodilator</b> : Helps open the airways of the lungs to make breathing easier.
-	  	<ul>
-	  		<li>Tiotropium (Spiriva)</li>
-	  		<li>Ipratropium Bromide</li>
-	  	</ul>
-	  </li>
-	  <li><b>Steroid</b> : Modifies or simulates hormone effects, often to reduce inflammation or for tissue growth and repair.
-	  	<ul>
-	  		<li>Flovent (fluticasone)</li>
-	  		<li>Pulmicort (budesonide)</li>
-	  	</ul>
-	  </li>
-	</ul><br>
-	<form action="/doctors.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+  <p><b>Suggested Medicines (Asthma): </b>:</p>
+  <ul>
+    <li><b>Bronchodilator</b> : Helps open the airways of the lungs to make breathing easier.
+      <ul>
+        <li>Tiotropium (Spiriva)</li>
+        <li>Ipratropium Bromide</li>
+      </ul>
+    </li>
+    <li><b>Steroid</b> : Modifies or simulates hormone effects, often to reduce inflammation or for tissue growth and repair.
+      <ul>
+        <li>Flovent (fluticasone)</li>
+        <li>Pulmicort (budesonide)</li>
+      </ul>
+    </li>
+  </ul><br>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
 
     <!-- Chest Pain -->
@@ -157,69 +179,83 @@ body {font-size:16px;}
     <hr style="width:250px;border:3px solid red" class="w3-round">
     <p>Chest Pain may occurs as a symptom for any of the following : </p>
     <ul>
-	  <li><h4><b>Heart Attack : </b></h4>Oxygenated Blood is cut off from heart and the heart muscle begins to die.
-	  	<br><b>Diagnosis : </b><br>
-	  	<ul>
-	  		<li>Chest Pain</li>
-	  		<li>Upper body pain</li>
-	  		<li>Sweating</li>
-	  		<li>Nausea</li>
-	  		<li>Fatigue</li>
-	  		<li>Dizziness</li>
-	  	</ul>
-	  </li>
-	  <p><b>Suggested Medicines : </b>:</p>
-	<ul>
-	  <li>Chew and swallow an <b>Aspirin</b></li>
-	  <li>Take <b>Nitroglycerin</b> if prescribed</li>
-	</ul><br>
-	  <li><h4><b>Acid Reflux : </b></h4>Acid reflux symptoms are caused when stomach contents flow up from the stomach back into the esophagus, causing symptoms like heartburn, stomach pain, and burping.
-	  <br><b>Diagnosis : </b><br>
-	  	<ul>
-	  		<li>Chest Pain</li>
-	  		<li>Throat Irritation</li>
-	  		<li>Coughing</li>
-	  		<li>Vomitting</li>
-	  		<li>Nausea</li>
-	   </ul>
-	  </li>
-	   <p><b>Suggested Medicines : </b>:</p>
-	<ul>
-	  <li><b>ENO</b></li>
-	  <li><b>Gelusil</b></li>
-	  <li><b>Antacids : </b>Maalox, Zantac, Pepcid</li>
-	</ul><br>
-	  <li><h4><b>Pericarditis : </b></h4>The symptoms of pericarditis are generally sharp and made worse by deep breathing. Sharp chest pain occurs when the inflammed pericardium rubs against the chest wall.
-	  	<br><b>Diagnosis : </b><br>
-	  	<ul>
-	  		<li>Chest Pain</li>
-	  		<li>Swollen Abdomen</li>
-	  		<li>Weakness</li>
-	  		<li>Fatigue</li>
-	  		<li>Nausea</li>
-	   </ul><br>
-	  </li>
-	  <li><h4><b>Gastritis : </b></h4>Weakness in your stomach lining allows digestive juices to damage and inflame it, causing gastritis.
-	  	<br><b>Diagnosis : </b><br>
-	  	<ul>
-	  		<li>Chest Pain</li>
-	  		<li>Abdomen Pain</li>
-	  		<li>Indigestion</li>
-	  		<li>Vomitting</li>
-	   </ul><br>
-	  </li>
-	  <p><b>Suggested Medicines : </b>:</p>
-	<ul>
-	  <li><b>Ranitin, Ranidom</b></li>
-	  <li><b>Nexium (Esomeprazole)</b></li>
-	</ul><br>
-	</ul>
-	
-	</ul><br>
-	<form action="/doctors.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+    <li><h4><b>Heart Attack : </b></h4>Oxygenated Blood is cut off from heart and the heart muscle begins to die.
+      <br><b>Diagnosis : </b><br>
+      <ul>
+        <li>Chest Pain</li>
+        <li>Upper body pain</li>
+        <li>Sweating</li>
+        <li>Nausea</li>
+        <li>Fatigue</li>
+        <li>Dizziness</li>
+      </ul>
+    </li>
+    <p><b>Suggested Medicines : </b>:</p>
+  <ul>
+    <li>Chew and swallow an <b>Aspirin</b></li>
+    <li>Take <b>Nitroglycerin</b> if prescribed</li>
+  </ul><br>
+    <li><h4><b>Acid Reflux : </b></h4>Acid reflux symptoms are caused when stomach contents flow up from the stomach back into the esophagus, causing symptoms like heartburn, stomach pain, and burping.
+    <br><b>Diagnosis : </b><br>
+      <ul>
+        <li>Chest Pain</li>
+        <li>Throat Irritation</li>
+        <li>Coughing</li>
+        <li>Vomitting</li>
+        <li>Nausea</li>
+     </ul>
+    </li>
+     <p><b>Suggested Medicines : </b>:</p>
+  <ul>
+    <li><b>ENO</b></li>
+    <li><b>Gelusil</b></li>
+    <li><b>Antacids : </b>Maalox, Zantac, Pepcid</li>
+  </ul><br>
+    <li><h4><b>Pericarditis : </b></h4>The symptoms of pericarditis are generally sharp and made worse by deep breathing. Sharp chest pain occurs when the inflammed pericardium rubs against the chest wall.
+      <br><b>Diagnosis : </b><br>
+      <ul>
+        <li>Chest Pain</li>
+        <li>Swollen Abdomen</li>
+        <li>Weakness</li>
+        <li>Fatigue</li>
+        <li>Nausea</li>
+     </ul><br>
+    </li>
+    <li><h4><b>Gastritis : </b></h4>Weakness in your stomach lining allows digestive juices to damage and inflame it, causing gastritis.
+      <br><b>Diagnosis : </b><br>
+      <ul>
+        <li>Chest Pain</li>
+        <li>Abdomen Pain</li>
+        <li>Indigestion</li>
+        <li>Vomitting</li>
+     </ul><br>
+    </li>
+    <p><b>Suggested Medicines : </b>:</p>
+  <ul>
+    <li><b>Ranitin, Ranidom</b></li>
+    <li><b>Nexium (Esomeprazole)</b></li>
+  </ul><br>
+  </ul>
+  
+  </ul><br>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
+  </div>
+
+    <!-- Poisoning -->
+  <div class="w3-container" id="poison" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Poisoning.</b></h1>
+    <hr style="width:235px;border:3px solid red" class="w3-round">
+    <p></p>
+    <p></p>
+    <p><b>Still Finding.. To be Uploaded</b>:</p>
+    <br>
+  <form action="hospitals.jsp">          
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
   
   <!-- Pregnancy -->
@@ -230,10 +266,24 @@ body {font-size:16px;}
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
-	<form action="/doctors.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
+  </div>
+
+    <!-- Seizures -->
+  <div class="w3-container" id="seizures" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Seizures.</b></h1>
+    <hr style="width:200px;border:3px solid red" class="w3-round">
+    <p></p>
+    <p></p>
+    <p><b>Still Finding.. To be Uploaded</b>:</p>
+    <br>
+  <form action="hospitals.jsp">          
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
 
     <!-- Bleeding -->
@@ -244,52 +294,10 @@ body {font-size:16px;}
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
-	<form action="/doctors.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
-  </div>
-
-  <!-- Poisoning -->
-  <div class="w3-container" id="poison" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Poisoning.</b></h1>
-    <hr style="width:235px;border:3px solid red" class="w3-round">
-    <p></p>
-    <p></p>
-    <p><b>Still Finding.. To be Uploaded</b>:</p>
-    <br>
-	<form action="/doctors.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
-  </div>
-
-  <!-- Bites -->
-  <div class="w3-container" id="bites" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Animal Bites.</b></h1>
-    <hr style="width:300px;border:3px solid red" class="w3-round">
-    <p></p>
-    <p></p>
-    <p><b>Still Finding.. To be Uploaded</b>:</p>
-    <br>
-	<form action="/doctors.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
-  </div>
-
-  <!-- Seizures -->
-  <div class="w3-container" id="seizures" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Seizures.</b></h1>
-    <hr style="width:200px;border:3px solid red" class="w3-round">
-    <p></p>
-    <p></p>
-    <p><b>Still Finding.. To be Uploaded</b>:</p>
-    <br>
-	<form action="/doctors.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
 
    <!-- Find Stores -->
@@ -297,21 +305,21 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>Response.</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>Find Nearby Medicine Stores.</b></h1>
     <hr style="width:680px;border:3px solid red" class="w3-round">
-	<br>
-	<form action="/stores.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Stores">
-	</form>
-	<br><br><br><br><br><br><br><br><br><br></b><p></p>
+  <br>
+  <form action="stores.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Stores">
+  </form>
+  <br><br><br><br><br><br><br><br><br><br></b><p></p>
   </div>
 
  <!-- SignUP -->
   <div class="w3-container" style="margin-top:80px" id="signup">
     <h1 class="w3-jumbo"><b>Response.</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>Register with us.</b></h1>
-    <hr style="width:400px;border:3px solid red" class="w3-round">
-    <a href="reg_hospital.html" class="button">Hospital</a>
-    <a href="reg_stores.html" class="button">Medicine Store</a>
+    <hr style="width:380px;border:3px solid red" class="w3-round">
+    <a href="register.html" class="button">Hospital</a>
+    <a href="register.html" class="button">Medicine Store</a>
     <br><br><br><br><br><br><br><br><br><br></b><p></p>
   </div>
 
@@ -319,7 +327,7 @@ body {font-size:16px;}
   <div class="w3-container" style="margin-top:80px" id="aboutus">
     <h1 class="w3-jumbo"><b>Response.</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>About Us.</b></h1>
-    <hr style="width:300px;border:3px solid red" class="w3-round">
+    <hr style="width:220px;border:3px solid red" class="w3-round">
     <br><br><br><br><br><br><br><br><br><br></b><p></p>
   </div>
   </div>
