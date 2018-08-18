@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
-<title>Immediate Response</title>
+<title>Response.</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
+
+.w3-jumbo {
+	text-decoration: underline;
+	}
 .button {
     background-color: #4CAF50;
     border: none;
@@ -30,6 +34,9 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+.active{
+	color:#fff!important;
+	background-color:#000!important}
 
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
@@ -42,11 +49,11 @@ body {font-size:16px;}
 <nav class="w3-sidebar w3-white w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
-    <h3 class="w3-padding-64"><b>NGO<br>Name</b></h3>
+    <h1 class="w3-padding-64"><b><u>Response.</u></b></h1>
   </div>
   <div class="w3-bar-block">
 	<a href="tel:108" class="button">Call  Ambulance</a>
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black"><h4><strong>Emergencies</strong></h4></a> 
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black active"><h4><strong>Emergencies</strong></h4></a> 
     <a href="#accidents" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Accidents</a> 
     <a href="#breathing" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Difficulty Breathing</a>
     <a href="#chestpain" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Chest Pain</a> 
@@ -64,7 +71,7 @@ body {font-size:16px;}
 <!-- Top menu on small screens -->
 <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
   <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>NGO Name</span>
+  <span>Response.</span>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -75,9 +82,9 @@ body {font-size:16px;}
 
   <!-- Accidents -->
   <div class="w3-container" style="margin-top:80px" id="accidents">
-    <h1 class="w3-jumbo"><b>NGO name</b></h1>
+    <h1 class="w3-jumbo"><b>Response.</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>Accidents.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:240px;border:3px solid red" class="w3-round">
     <p>First check that you and the casualty aren't in any danger, and, if possible, make the situation safe</p>
     <p>If a person is unconscious but breathing, and has no other injuries that would stop them being moved, place them in the recovery position until help arrives.</p>
     <p>Keep them under observation to ensure they continue to breathe normally, and don't obstruct their airway.</p>
@@ -95,21 +102,21 @@ body {font-size:16px;}
 	</ul><br>
 	<form action="/doctors.jsp">					
 		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Doctors">
+	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
 	</form>
   </div>
 
   <!-- Breathing Difficulty -->
   <div class="w3-container" id="breathing" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Difficulty Breathing.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:450px;border:3px solid red" class="w3-round">
     <p>Breathing Problems may occurs as a symptom for any of the following : </p>
     <ul>
 	<li>Asthma attack</li>
 	<li>Pressure on Throat or Chest</li>
 	<li>Allergies</li>
 	</ul>
-	<p>Immediate Responces : </p>
+	<p>Immediate Responses : </p>
     <ul>
 	<li>Look for any pressure on Chest or Thrroat and remove them as soon as possible.</li>
 	<li>If any known sources of allrgies are found, remove them.</li>
@@ -140,114 +147,182 @@ body {font-size:16px;}
 	</ul><br>
 	<form action="/doctors.jsp">					
 		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Doctors">
+	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
 	</form>
   </div>
 
     <!-- Chest Pain -->
   <div class="w3-container" id="chestpain" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Chest Pain.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:250px;border:3px solid red" class="w3-round">
     <p>Chest Pain may occurs as a symptom for any of the following : </p>
     <ul>
-	  <li>Asthma attack</li>
-	  <li>Pressure on Throat or Chest</li>
-	  <li>Allergies</li>
+	  <li><h4><b>Heart Attack : </b></h4>Oxygenated Blood is cut off from heart and the heart muscle begins to die.
+	  	<br><b>Diagnosis : </b><br>
+	  	<ul>
+	  		<li>Chest Pain</li>
+	  		<li>Upper body pain</li>
+	  		<li>Sweating</li>
+	  		<li>Nausea</li>
+	  		<li>Fatigue</li>
+	  		<li>Dizziness</li>
+	  	</ul>
+	  </li>
+	  <p><b>Suggested Medicines : </b>:</p>
+	<ul>
+	  <li>Chew and swallow an <b>Aspirin</b></li>
+	  <li>Take <b>Nitroglycerin</b> if prescribed</li>
+	</ul><br>
+	  <li><h4><b>Acid Reflux : </b></h4>Acid reflux symptoms are caused when stomach contents flow up from the stomach back into the esophagus, causing symptoms like heartburn, stomach pain, and burping.
+	  <br><b>Diagnosis : </b><br>
+	  	<ul>
+	  		<li>Chest Pain</li>
+	  		<li>Throat Irritation</li>
+	  		<li>Coughing</li>
+	  		<li>Vomitting</li>
+	  		<li>Nausea</li>
+	   </ul>
+	  </li>
+	   <p><b>Suggested Medicines : </b>:</p>
+	<ul>
+	  <li><b>ENO</b></li>
+	  <li><b>Gelusil</b></li>
+	  <li><b>Antacids : </b>Maalox, Zantac, Pepcid</li>
+	</ul><br>
+	  <li><h4><b>Pericarditis : </b></h4>The symptoms of pericarditis are generally sharp and made worse by deep breathing. Sharp chest pain occurs when the inflammed pericardium rubs against the chest wall.
+	  	<br><b>Diagnosis : </b><br>
+	  	<ul>
+	  		<li>Chest Pain</li>
+	  		<li>Swollen Abdomen</li>
+	  		<li>Weakness</li>
+	  		<li>Fatigue</li>
+	  		<li>Nausea</li>
+	   </ul><br>
+	  </li>
+	  <li><h4><b>Gastritis : </b></h4>Weakness in your stomach lining allows digestive juices to damage and inflame it, causing gastritis.
+	  	<br><b>Diagnosis : </b><br>
+	  	<ul>
+	  		<li>Chest Pain</li>
+	  		<li>Abdomen Pain</li>
+	  		<li>Indigestion</li>
+	  		<li>Vomitting</li>
+	   </ul><br>
+	  </li>
+	  <p><b>Suggested Medicines : </b>:</p>
+	<ul>
+	  <li><b>Ranitin, Ranidom</b></li>
+	  <li><b>Nexium (Esomeprazole)</b></li>
+	</ul><br>
 	</ul>
+	
+	</ul><br>
+	<form action="/doctors.jsp">					
+		<input type="text" name="location" placeholder="Enter Locality" required>
+	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+	</form>
   </div>
   
   <!-- Pregnancy -->
   <div class="w3-container" id="pregnancy" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Pregnancy.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:260px;border:3px solid red" class="w3-round">
     <p></p>
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
 	<form action="/doctors.jsp">					
 		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Doctors">
+	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
 	</form>
   </div>
 
     <!-- Bleeding -->
   <div class="w3-container" id="bleeding" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Uncontrolled Bleeding.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:530px;border:3px solid red" class="w3-round">
     <p></p>
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
 	<form action="/doctors.jsp">					
 		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Doctors">
+	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
 	</form>
   </div>
 
   <!-- Poisoning -->
   <div class="w3-container" id="poison" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Poisoning.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:235px;border:3px solid red" class="w3-round">
     <p></p>
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
 	<form action="/doctors.jsp">					
 		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Doctors">
+	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
 	</form>
   </div>
 
   <!-- Bites -->
   <div class="w3-container" id="bites" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Animal Bites.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:300px;border:3px solid red" class="w3-round">
     <p></p>
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
 	<form action="/doctors.jsp">					
 		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Doctors">
+	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
 	</form>
   </div>
 
   <!-- Seizures -->
   <div class="w3-container" id="seizures" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Seizures.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:200px;border:3px solid red" class="w3-round">
     <p></p>
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
 	<form action="/doctors.jsp">					
 		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Doctors">
+	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
 	</form>
   </div>
 
    <!-- Find Stores -->
   <div class="w3-container" style="margin-top:80px" id="findstores">
-    <h1 class="w3-jumbo"><b>NGO name</b></h1>
+    <h1 class="w3-jumbo"><b>Response.</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>Find Nearby Medicine Stores.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <hr style="width:680px;border:3px solid red" class="w3-round">
 	<br>
-	<form action="/doctors.jsp">					
+	<form action="/stores.jsp">					
 		<input type="text" name="location" placeholder="Enter Locality" required>
 	    <input class="button_submit" type="submit" value="Find Stores">
 	</form>
+	<br><br><br><br><br><br><br><br><br><br></b><p></p>
   </div>
 
  <!-- SignUP -->
   <div class="w3-container" style="margin-top:80px" id="signup">
-    <h1 class="w3-jumbo"><b>NGO name</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Sign Up with us.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <a href="login_doctors.html" class="button">Doctors</a>
-    <a href="login_pharma.html" class="button">Pharmacists</a>
-    <a href="login_stores.html" class="button">Medicine Store</a>    
+    <h1 class="w3-jumbo"><b>Response.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Register with us.</b></h1>
+    <hr style="width:400px;border:3px solid red" class="w3-round">
+    <a href="reg_hospital.html" class="button">Hospital</a>
+    <a href="reg_stores.html" class="button">Medicine Store</a>
+    <br><br><br><br><br><br><br><br><br><br></b><p></p>
   </div>
 
+<!-- About Us -->
+  <div class="w3-container" style="margin-top:80px" id="aboutus">
+    <h1 class="w3-jumbo"><b>Response.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>About Us.</b></h1>
+    <hr style="width:300px;border:3px solid red" class="w3-round">
+    <br><br><br><br><br><br><br><br><br><br></b><p></p>
+  </div>
+  </div>
 
 <script>
 // Script to open and close sidebar
@@ -259,6 +334,16 @@ function w3_open() {
 function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
+}
+
+var header = document.getElementById("mySidebar");
+var btns = header.getElementsByClassName("w3-hover-black");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
 }
 
 // Modal Image Gallery
