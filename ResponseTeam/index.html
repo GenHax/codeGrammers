@@ -7,9 +7,61 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px Arial;  
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 400px;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
 .w3-jumbo {
-	text-decoration: underline;
-	}
+  text-decoration: underline;
+  }
 .button {
     background-color: #4CAF50;
     border: none;
@@ -35,8 +87,8 @@
     cursor: pointer;
 }
 .active{
-	color:#fff!important;
-	background-color:#000!important}
+  color:#fff!important;
+  background-color:#000!important}
 
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
@@ -49,10 +101,11 @@ body {font-size:16px;}
 <nav class="w3-sidebar w3-white w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
   <div class="w3-container">
-    <h1 class="w3-padding-64"><b><u>Response.</u></b></h1>
+    <h1 class="w3-padding-64"><b><u>Response.</u></b>
+      <a href="tel:108" class="button">Call  Ambulance</a>
+    </h1>
   </div>
   <div class="w3-bar-block">
-	<a href="tel:108" class="button">Call  Ambulance</a>
     <a href="#e" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black active"><h4><strong>Emergencies</strong></h4></a> 
     <a href="#findstores" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black"><h4><strong>Find Med. Stores</strong></h4></a>
     <a href="#signup" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black"><h4><strong>SignUp</strong></h4></a>
@@ -77,12 +130,19 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>Emergencies.</b></h1>
     <hr style="width:200px;border:3px solid red" class="w3-round">
     <div class="w3-bar-block">
+    <!--Make sure the form has the autocomplete function switched off:-->          
+        <form autocomplete="off">
+          <div class="autocomplete" style="width:300px;">
+            <input id="myInput" type="text" name="myEmergencies" placeholder="Search Emergencies ...">
+          </div>
+          <input type="submit" name="Search">
+        </form>
       <a href="#accidents" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Accidents</a> 
       <a href="#bites" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Animal bites</a>
-      <a href="#chestpain" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Chest Pain</a>
-      <a href="#breathing" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Difficulty Breathing</a>       
-      <a href="#pregnancy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Pregnancy</a> 
+      <a href="#breathing" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Breathing Difficulty</a>
+      <a href="#chestpain" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Chest Pain</a>             
       <a href="#poison" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Poisoning</a>
+      <a href="#pregnancy" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Pregnancy</a> 
       <a href="#seizures" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Seizures</a>
       <a href="#bleeding" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-black">Uncontrolled Bleeding</a> 
     </div>
@@ -99,64 +159,78 @@ body {font-size:16px;}
     <p>If a person isn't breathing normally after an incident, call an ambulance and start CPR straight away</p>
     <p>To perform CPR : </p>
     <ul>
-	<li>Apply and maintain pressure to the wound with your gloved hand, using a clean pad or dressing if possible; continue to apply pressure until the bleeding stops&nbsp;</li>
-	<li>Use a clean dressing to bandage the wound firmly</li>
-	<li>If&nbsp;bleeding continues through the pad, apply pressure to the wound&nbsp; until the bleeding stops and then apply another pad over the top and bandage it in place; don't remove the original pad or dressing, but continue to check that&nbsp;the bleeding has stopped&nbsp;</li>
-	</ul><br>
-	<p><b>Suggested Medicines : </b>:</p>
-	<ul>
-	  <li>Pain Killers : Aspirin, Naproxen, Ibuprofen</li>
-	  <li>Antiseptics : Betadine</li>
-	</ul><br>
-	<form action="hospitals.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+  <li>Apply and maintain pressure to the wound with your gloved hand, using a clean pad or dressing if possible; continue to apply pressure until the bleeding stops&nbsp;</li>
+  <li>Use a clean dressing to bandage the wound firmly</li>
+  <li>If&nbsp;bleeding continues through the pad, apply pressure to the wound&nbsp; until the bleeding stops and then apply another pad over the top and bandage it in place; don't remove the original pad or dressing, but continue to check that&nbsp;the bleeding has stopped&nbsp;</li>
+  </ul><br>
+  <p><b>Suggested Medicines : </b>:</p>
+  <ul>
+    <li>Pain Killers : Aspirin, Naproxen, Ibuprofen</li>
+    <li>Antiseptics : Betadine</li>
+  </ul><br>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
+  </div>
+
+    <!-- Bites -->
+  <div class="w3-container" id="bites" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Animal Bites.</b></h1>
+    <hr style="width:300px;border:3px solid red" class="w3-round">
+    <p></p>
+    <p></p>
+    <p><b>Still Finding.. To be Uploaded</b>:</p>
+    <br>
+  <form action="hospitals.jsp">          
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
 
   <!-- Breathing Difficulty -->
   <div class="w3-container" id="breathing" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Difficulty Breathing.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Breathing Difficulty.</b></h1>
     <hr style="width:450px;border:3px solid red" class="w3-round">
     <p>Breathing Problems may occurs as a symptom for any of the following : </p>
     <ul>
-	<li>Asthma attack</li>
-	<li>Pressure on Throat or Chest</li>
-	<li>Allergies</li>
-	</ul>
-	<p>Immediate Responses : </p>
+  <li>Asthma attack</li>
+  <li>Pressure on Throat or Chest</li>
+  <li>Allergies</li>
+  </ul>
+  <p>Immediate Responses : </p>
     <ul>
-	<li>Look for any pressure on Chest or Thrroat and remove them as soon as possible.</li>
-	<li>If any known sources of allrgies are found, remove them.</li>
-	<li>If Still the problem persists, It may be a <strong>Asthma attack</strong>.<br>Follow the following Steps : </li>
-		<ul>
-		<li>Sit the person upright comfortably and loosen tight clothing.</li>
-		<li>If the person has asthma medication, such as an inhaler, assist in using it.</li>
-		<li><strong>Do Not</strong> borrow someone else's inhaler.</li>
-		</ul>
-	<li>Symptoms of acute attack include difficulty talking or walking because of shortness of breath or lips or fingernails turning blue. In such case wait for help to arrive.</li>
-	</ul>
+  <li>Look for any pressure on Chest or Thrroat and remove them as soon as possible.</li>
+  <li>If any known sources of allrgies are found, remove them.</li>
+  <li>If Still the problem persists, It may be a <strong>Asthma attack</strong>.<br>Follow the following Steps : </li>
+    <ul>
+    <li>Sit the person upright comfortably and loosen tight clothing.</li>
+    <li>If the person has asthma medication, such as an inhaler, assist in using it.</li>
+    <li><strong>Do Not</strong> borrow someone else's inhaler.</li>
+    </ul>
+  <li>Symptoms of acute attack include difficulty talking or walking because of shortness of breath or lips or fingernails turning blue. In such case wait for help to arrive.</li>
+  </ul>
     <p></p>
     <br>
-	<p><b>Suggested Medicines (Asthma): </b>:</p>
-	<ul>
-	  <li><b>Bronchodilator</b> : Helps open the airways of the lungs to make breathing easier.
-	  	<ul>
-	  		<li>Tiotropium (Spiriva)</li>
-	  		<li>Ipratropium Bromide</li>
-	  	</ul>
-	  </li>
-	  <li><b>Steroid</b> : Modifies or simulates hormone effects, often to reduce inflammation or for tissue growth and repair.
-	  	<ul>
-	  		<li>Flovent (fluticasone)</li>
-	  		<li>Pulmicort (budesonide)</li>
-	  	</ul>
-	  </li>
-	</ul><br>
-	<form action="hospitals.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+  <p><b>Suggested Medicines (Asthma): </b>:</p>
+  <ul>
+    <li><b>Bronchodilator</b> : Helps open the airways of the lungs to make breathing easier.
+      <ul>
+        <li>Tiotropium (Spiriva)</li>
+        <li>Ipratropium Bromide</li>
+      </ul>
+    </li>
+    <li><b>Steroid</b> : Modifies or simulates hormone effects, often to reduce inflammation or for tissue growth and repair.
+      <ul>
+        <li>Flovent (fluticasone)</li>
+        <li>Pulmicort (budesonide)</li>
+      </ul>
+    </li>
+  </ul><br>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
 
     <!-- Chest Pain -->
@@ -165,69 +239,83 @@ body {font-size:16px;}
     <hr style="width:250px;border:3px solid red" class="w3-round">
     <p>Chest Pain may occurs as a symptom for any of the following : </p>
     <ul>
-	  <li><h4><b>Heart Attack : </b></h4>Oxygenated Blood is cut off from heart and the heart muscle begins to die.
-	  	<br><b>Diagnosis : </b><br>
-	  	<ul>
-	  		<li>Chest Pain</li>
-	  		<li>Upper body pain</li>
-	  		<li>Sweating</li>
-	  		<li>Nausea</li>
-	  		<li>Fatigue</li>
-	  		<li>Dizziness</li>
-	  	</ul>
-	  </li>
-	  <p><b>Suggested Medicines : </b>:</p>
-	<ul>
-	  <li>Chew and swallow an <b>Aspirin</b></li>
-	  <li>Take <b>Nitroglycerin</b> if prescribed</li>
-	</ul><br>
-	  <li><h4><b>Acid Reflux : </b></h4>Acid reflux symptoms are caused when stomach contents flow up from the stomach back into the esophagus, causing symptoms like heartburn, stomach pain, and burping.
-	  <br><b>Diagnosis : </b><br>
-	  	<ul>
-	  		<li>Chest Pain</li>
-	  		<li>Throat Irritation</li>
-	  		<li>Coughing</li>
-	  		<li>Vomitting</li>
-	  		<li>Nausea</li>
-	   </ul>
-	  </li>
-	   <p><b>Suggested Medicines : </b>:</p>
-	<ul>
-	  <li><b>ENO</b></li>
-	  <li><b>Gelusil</b></li>
-	  <li><b>Antacids : </b>Maalox, Zantac, Pepcid</li>
-	</ul><br>
-	  <li><h4><b>Pericarditis : </b></h4>The symptoms of pericarditis are generally sharp and made worse by deep breathing. Sharp chest pain occurs when the inflammed pericardium rubs against the chest wall.
-	  	<br><b>Diagnosis : </b><br>
-	  	<ul>
-	  		<li>Chest Pain</li>
-	  		<li>Swollen Abdomen</li>
-	  		<li>Weakness</li>
-	  		<li>Fatigue</li>
-	  		<li>Nausea</li>
-	   </ul><br>
-	  </li>
-	  <li><h4><b>Gastritis : </b></h4>Weakness in your stomach lining allows digestive juices to damage and inflame it, causing gastritis.
-	  	<br><b>Diagnosis : </b><br>
-	  	<ul>
-	  		<li>Chest Pain</li>
-	  		<li>Abdomen Pain</li>
-	  		<li>Indigestion</li>
-	  		<li>Vomitting</li>
-	   </ul><br>
-	  </li>
-	  <p><b>Suggested Medicines : </b>:</p>
-	<ul>
-	  <li><b>Ranitin, Ranidom</b></li>
-	  <li><b>Nexium (Esomeprazole)</b></li>
-	</ul><br>
-	</ul>
-	
-	</ul><br>
-	<form action="hospitals.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+    <li><h4><b>Heart Attack : </b></h4>Oxygenated Blood is cut off from heart and the heart muscle begins to die.
+      <br><b>Diagnosis : </b><br>
+      <ul>
+        <li>Chest Pain</li>
+        <li>Upper body pain</li>
+        <li>Sweating</li>
+        <li>Nausea</li>
+        <li>Fatigue</li>
+        <li>Dizziness</li>
+      </ul>
+    </li>
+    <p><b>Suggested Medicines : </b>:</p>
+  <ul>
+    <li>Chew and swallow an <b>Aspirin</b></li>
+    <li>Take <b>Nitroglycerin</b> if prescribed</li>
+  </ul><br>
+    <li><h4><b>Acid Reflux : </b></h4>Acid reflux symptoms are caused when stomach contents flow up from the stomach back into the esophagus, causing symptoms like heartburn, stomach pain, and burping.
+    <br><b>Diagnosis : </b><br>
+      <ul>
+        <li>Chest Pain</li>
+        <li>Throat Irritation</li>
+        <li>Coughing</li>
+        <li>Vomitting</li>
+        <li>Nausea</li>
+     </ul>
+    </li>
+     <p><b>Suggested Medicines : </b>:</p>
+  <ul>
+    <li><b>ENO</b></li>
+    <li><b>Gelusil</b></li>
+    <li><b>Antacids : </b>Maalox, Zantac, Pepcid</li>
+  </ul><br>
+    <li><h4><b>Pericarditis : </b></h4>The symptoms of pericarditis are generally sharp and made worse by deep breathing. Sharp chest pain occurs when the inflammed pericardium rubs against the chest wall.
+      <br><b>Diagnosis : </b><br>
+      <ul>
+        <li>Chest Pain</li>
+        <li>Swollen Abdomen</li>
+        <li>Weakness</li>
+        <li>Fatigue</li>
+        <li>Nausea</li>
+     </ul><br>
+    </li>
+    <li><h4><b>Gastritis : </b></h4>Weakness in your stomach lining allows digestive juices to damage and inflame it, causing gastritis.
+      <br><b>Diagnosis : </b><br>
+      <ul>
+        <li>Chest Pain</li>
+        <li>Abdomen Pain</li>
+        <li>Indigestion</li>
+        <li>Vomitting</li>
+     </ul><br>
+    </li>
+    <p><b>Suggested Medicines : </b>:</p>
+  <ul>
+    <li><b>Ranitin, Ranidom</b></li>
+    <li><b>Nexium (Esomeprazole)</b></li>
+  </ul><br>
+  </ul>
+  
+  </ul><br>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
+  </div>
+
+    <!-- Poisoning -->
+  <div class="w3-container" id="poison" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Poisoning.</b></h1>
+    <hr style="width:235px;border:3px solid red" class="w3-round">
+    <p></p>
+    <p></p>
+    <p><b>Still Finding.. To be Uploaded</b>:</p>
+    <br>
+  <form action="hospitals.jsp">          
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
   
   <!-- Pregnancy -->
@@ -238,10 +326,39 @@ body {font-size:16px;}
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
-	<form action="hospitals.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
+  </div>
+
+    <!-- Seizures -->
+  <div class="w3-container" id="seizures" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Seizures.</b></h1>
+    <hr style="width:200px;border:3px solid red" class="w3-round">
+    <h3>Immediate Responses : </h3>
+    First aid for a seizure is aimed at keeping the person safe until the seizure stops on its own. Most seizures last from 30 seconds to 2 minutes.
+  <ul>
+  <li>Stay calm and reassure bystanders.</li>
+  <li>Loosen anything around the person's neck (clothing, ties, jewelry, etc.) that may impede breathing.</li>
+  <li><b>Do not</b> restrain the person – this may result in injury.</li>
+  <li><b>Do not</b> put anything into the person's mouth, and do not try to hold the tongue or force the mouth open. This may also cause injury.</li>
+  <li>Clear the area around the person and remove any objects that could injure them (glasses, furniture, etc.).</li>
+  <li>Put something flat and soft under their head.</li>
+  <li><b>Do not</b> leave a person alone after a seizure – they may be disoriented or confused.</li>
+  <li>If the person is known to have <b>Epilepsy</b> it may not be necessary to call Ambulance.</li>
+    <ul>
+    <li>The seizure lasts longer than 5 minutes.</li>
+    <li>Another seizure begins soon after the first one ends.</li>
+    <li>The person does not awaken after movements have stopped.</li>
+    </ul>
+  </ul>
+    <p></p>
+  <br>
+  <form action="hospitals.jsp">          
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
   </div>
 
     <!-- Bleeding -->
@@ -252,52 +369,11 @@ body {font-size:16px;}
     <p></p>
     <p><b>Still Finding.. To be Uploaded</b>:</p>
     <br>
-	<form action="hospitals.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
-  </div>
-
-  <!-- Poisoning -->
-  <div class="w3-container" id="poison" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Poisoning.</b></h1>
-    <hr style="width:235px;border:3px solid red" class="w3-round">
-    <p></p>
-    <p></p>
-    <p><b>Still Finding.. To be Uploaded</b>:</p>
-    <br>
-	<form action="hospitals.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
-  </div>
-
-  <!-- Bites -->
-  <div class="w3-container" id="bites" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Animal Bites.</b></h1>
-    <hr style="width:300px;border:3px solid red" class="w3-round">
-    <p></p>
-    <p></p>
-    <p><b>Still Finding.. To be Uploaded</b>:</p>
-    <br>
-	<form action="hospitals.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
-  </div>
-
-  <!-- Seizures -->
-  <div class="w3-container" id="seizures" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Seizures.</b></h1>
-    <hr style="width:200px;border:3px solid red" class="w3-round">
-    <p></p>
-    <p></p>
-    <p><b>Still Finding.. To be Uploaded</b>:</p>
-    <br>
-	<form action="hospitals.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Nearest Hospitals">
-	</form>
+  <form action="hospitals.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Nearest Hospitals">
+  </form>
+  <br><br><br><br><br><br><br><br><br><br></b><p></p>
   </div>
 
    <!-- Find Stores -->
@@ -305,19 +381,19 @@ body {font-size:16px;}
     <h1 class="w3-jumbo"><b>Response.</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>Find Nearby Medicine Stores.</b></h1>
     <hr style="width:680px;border:3px solid red" class="w3-round">
-	<br>
-	<form action="stores.jsp">					
-		<input type="text" name="location" placeholder="Enter Locality" required>
-	    <input class="button_submit" type="submit" value="Find Stores">
-	</form>
-	<br><br><br><br><br><br><br><br><br><br></b><p></p>
+  <br>
+  <form action="stores.jsp">         
+    <input type="text" name="location" placeholder="Enter Locality" required>
+      <input class="button_submit" type="submit" value="Find Stores">
+  </form>
+  <br><br><br><br><br><br><br><br><br><br></b><p></p>
   </div>
 
  <!-- SignUP -->
   <div class="w3-container" style="margin-top:80px" id="signup">
     <h1 class="w3-jumbo"><b>Response.</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>Register with us.</b></h1>
-    <hr style="width:400px;border:3px solid red" class="w3-round">
+    <hr style="width:380px;border:3px solid red" class="w3-round">
     <a href="register.html" class="button">Hospital</a>
     <a href="register.html" class="button">Medicine Store</a>
     <br><br><br><br><br><br><br><br><br><br></b><p></p>
@@ -327,7 +403,14 @@ body {font-size:16px;}
   <div class="w3-container" style="margin-top:80px" id="aboutus">
     <h1 class="w3-jumbo"><b>Response.</b></h1>
     <h1 class="w3-xxxlarge w3-text-red"><b>About Us.</b></h1>
-    <hr style="width:300px;border:3px solid red" class="w3-round">
+    <hr style="width:220px;border:3px solid red" class="w3-round">
+    <p></p>
+    <p><h3><u>Meet The Team : </u></h3></p>
+    <ul>
+      <li>Ashpo Ghosh</li>
+      <li>MD. Sajid</li>
+      <li>Satyajit Maharana</li>
+    </ul>
     <br><br><br><br><br><br><br><br><br><br></b><p></p>
   </div>
   </div>
@@ -361,6 +444,110 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
+//Auto Complete Feature
+function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+      });
+    function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+}
+
+/*An array containing all the Available Emergencies.*/
+var emergencies = ["Accidents", "Animal Bites", "Breathing Difficulty", "Chest Pain", "Poisoning", "Pregnancy", "Seizures", "Uncontrolled Bleeding"];
+
+/*initiate the autocomplete function on the "myInput" element, and pass along the emergencies array as possible autocomplete values:*/
+autocomplete(document.getElementById("myInput"), emergencies);
 </script>
 
 </body>
